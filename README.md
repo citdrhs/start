@@ -7,7 +7,7 @@ Projects that will be hosted on the CIT Pipeline must use Python/Flask for any s
 2. Once you get the "Hello, world!" version of your app running, push the changes to a new GitHub repository in this organization. You will need to request that new repository be created by an org admin.
 3. As you develop your code, you should commit and push frequently, following all branching and version control best practices
 4. You must generate and maintain a `requirements.txt` file from which a server administrator can install all dependencies using a single command `pip install -r requirements.txt`
-5. Once version 1 of the app is published an live, you will need to configure GitHub Actions and webhooks to automatically push changes approved and deployed to the main branch. There MUST be a code review/pull request process implemented. No unapproved pushes/merges to main!
+5. Once version 1 of the app is published and live, you will need to configure GitHub Actions and webhooks to automatically push changes approved and deployed to the main branch. There MUST be a code review/pull request process implemented. No unapproved pushes/merges to main!
 
 ** Note that the frontend and backend of this repository are not programmed to talk "to eachother." With multiple ways to do this, a standard is not necessarily enforced.
 
