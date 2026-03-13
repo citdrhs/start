@@ -1,13 +1,13 @@
 [Unit]
-Description=Gunicorn instance to serve flasktest
+Description=Gunicorn instance to serve appname
 After=network.target
 
 [Service]
-User=dgmiller1
+User=appname
 Group=www-data
-WorkingDirectory=/var/www/html/flasktest
-Environment="PATH=/var/www/html/flasktest/flasktestvenv/bin"
-ExecStart=/var/www/html/flasktest/flasktestvenv/bin/gunicorn --workers 3 --bind unix:flasktest.sock -m 007 wsgi:app
+WorkingDirectory=/home/appname/www
+Environment=PATH=/home/appname/www/venv/bin SCRIPT_NAME=/appname
+ExecStart=/home/appname/www/venv/bin/gunicorn --workers 3 --bind unix:appname.sock -m 007 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
